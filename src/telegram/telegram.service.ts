@@ -19,10 +19,11 @@ export class TelegramService {
             return;
         }
 
-        for (const message of messages) {
-            await ctx.reply(message, {
+        for (let i = 0; i < messages.length; i++) {
+            await ctx.reply(messages[i], {
                 parse_mode: "MarkdownV2",
                 disable_web_page_preview: true,
+                disable_notification: i > 0,
             });
         }
     }
