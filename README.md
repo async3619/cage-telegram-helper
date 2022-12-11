@@ -56,8 +56,6 @@ services:
 
 once you started this server, your bot will be able to provide you a token that you can use to configure your Cage instance:
 
-```bash
-
 ```text
 You: /start
 
