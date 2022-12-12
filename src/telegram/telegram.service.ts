@@ -1,4 +1,5 @@
 import { v4 as generateUuid } from "uuid";
+import { marked } from "marked";
 
 import { Context, Telegraf } from "telegraf";
 import { Ctx, InjectBot, Start, Update } from "nestjs-telegraf";
@@ -20,8 +21,8 @@ export class TelegramService {
         }
 
         for (let i = 0; i < messages.length; i++) {
-            await ctx.reply(messages[i], {
-                parse_mode: "MarkdownV2",
+            await ctx.reply(marked.parseInline(messages[i]), {
+                parse_mode: "HTML",
                 disable_web_page_preview: true,
                 disable_notification: i > 0,
             });
