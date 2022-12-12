@@ -12,7 +12,7 @@ export class TelegramController {
     @UseGuards(TokenGuard)
     @Post("/notify")
     public async notify(@Body() data: NotifyDto) {
-        await this.telegramService.notify(data.token, data.content);
+        await this.telegramService.notify(data);
 
         return {
             success: true,

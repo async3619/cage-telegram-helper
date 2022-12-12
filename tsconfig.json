@@ -23,7 +23,8 @@
         "paths": {
             "@root/*": ["./src/*"],
             "@telegram/*": ["./src/telegram/*"],
-            "@token/*": ["./src/token/*"]
+            "@token/*": ["./src/token/*"],
+            "@utils/*": ["./src/utils/*"]
         }
     }
 }
