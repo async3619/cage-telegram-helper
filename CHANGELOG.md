@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/async3619/cage-telegram-helper/compare/v1.1.0...v1.1.1) (2022-12-12)
+
+
+### Bug Fixes 🐞
+
+* make dockerized image pointing correct entry point ([bb32b27](https://github.com/async3619/cage-telegram-helper/commit/bb32b27930d20171e2d39bc2c8d5a25bcaf71560))
+
 ## [1.1.0](https://github.com/async3619/cage-telegram-helper/compare/v1.0.1...v1.1.0) (2022-12-12)
 
 
