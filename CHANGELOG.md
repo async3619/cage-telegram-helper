@@ -1,3 +1,15 @@
+## [1.2.0](https://github.com/async3619/cage-telegram-helper/compare/v1.1.1...v1.2.0) (2022-12-15)
+
+
+### Internal 🧰
+
+* **telegram:** make sub-content messages replying to original message ([ac445d0](https://github.com/async3619/cage-telegram-helper/commit/ac445d072e8396b7fbf661a629b4ac3365e812a0))
+
+
+### Features ✨
+
+* implement closing sub-message feature ([5c6c5e4](https://github.com/async3619/cage-telegram-helper/commit/5c6c5e42ab75a8558e62bc3a310dcf232d229a5e))
+
 ## [1.1.1](https://github.com/async3619/cage-telegram-helper/compare/v1.1.0...v1.1.1) (2022-12-12)
 
 
