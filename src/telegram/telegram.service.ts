@@ -113,8 +113,20 @@ export class TelegramService {
             parse_mode: "HTML",
             disable_web_page_preview: true,
             reply_to_message_id: originalMessageId,
+            ...Keyboard.make([Key.callback("🗑️ Close this message", "close-sub-message")]).inline(),
         });
 
+        await ctx.answerCbQuery();
+    }
+
+    @Action(["close-sub-message"])
+    private async closeMessage(@Ctx() ctx: Context) {
+        if (!ctx.from || !ctx.callbackQuery?.message) {
+            return;
+        }
+
+        const targetMessageId = ctx.callbackQuery.message.message_id;
+        await ctx.deleteMessage(targetMessageId);
         await ctx.answerCbQuery();
     }
 
