@@ -79,8 +79,9 @@ export class TelegramService {
             return;
         }
 
+        const originalMessageId = ctx.callbackQuery.message.message_id;
         const user = await this.getUser(ctx.from);
-        const message = await this.getMessage(ctx.callbackQuery.message.message_id);
+        const message = await this.getMessage(originalMessageId);
         if (!user || !message || message.messageId !== ctx.callbackQuery.message.message_id) {
             return;
         }
@@ -111,6 +112,7 @@ export class TelegramService {
         await ctx.reply(marked.parseInline(data), {
             parse_mode: "HTML",
             disable_web_page_preview: true,
+            reply_to_message_id: originalMessageId,
         });
 
         await ctx.answerCbQuery();
